@@ -31,7 +31,7 @@ char **strtow(char *str, char *d)
 			ii++;
 		kk = 0;
 		while (!isDelim(str[ii + kk], d) && str[ii + kk])
-			k++;
+			kk++;
 		s[jj] = malloc((kk + 1) * sizeof(char));
 		if (!s[jj])
 		{
@@ -42,7 +42,7 @@ char **strtow(char *str, char *d)
 		}
 		for (m = 0; m < kk; m++)
 			s[jj][m] = str[ii++];
-		s[j][m] = 0;
+		s[jj][m] = 0;
 	}
 	s[jj] = NULL;
 	return (s);
@@ -85,7 +85,7 @@ char **strtow2(char *str, char d)
 			free(s);
 			return (NULL);
 		}
-		for (m = 0; m < k; m++)
+		for (m = 0; m < kk; m++)
 			s[jj][m] = str[ii++];
 		s[jj][m] = 0;
 	}

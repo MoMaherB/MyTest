@@ -211,7 +211,7 @@ int _setenv(info_t *, char *, char *);
 char *getHistoryFile(info_t *info);
 int writeHistory(info_t *info);
 int readHistory(info_t *info);
-int buildHistory_list(info_t *info, char *buf, int linecount);
+int buildHistoryList(info_t *info, char *buf, int linecount);
 int renumberHistory(info_t *info);
 
 /* lists.c */

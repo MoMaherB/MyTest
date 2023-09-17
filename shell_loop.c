@@ -14,11 +14,11 @@ int hsh(info_t *info, char **av)
 
 	while (rr != -1 && builtin_ret != -2)
 	{
-		clear_info(info);
+		clearInfo(info);
 		if (interactive(info))
 			_puts("$ ");
 		_eputchar(BUF_FLUSH);
-		r = get_input(info);
+		rr = getInput(info);
 		if (rr != -1)
 		{
 			setInfo(info, av);
@@ -95,7 +95,7 @@ void findCmd(info_t *info)
 		info->linecount_flag = 0;
 	}
 	for (i = 0, k = 0; info->arg[i]; i++)
-		if (!is_delim(info->arg[i], " \t\n"))
+		if (!isDelim(info->arg[i], " \t\n"))
 			k++;
 	if (!k)
 		return;

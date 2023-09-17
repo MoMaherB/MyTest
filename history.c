@@ -14,7 +14,7 @@ char *getHistoryFile(info_t *info)
 	dire = _getenv(info, "HOME=");
 	if (!dire)
 		return (NULL);
-	buff = malloc(sizeof(char) * (_strlen(dir) + _strlen(HIST_FILE) + 2));
+	buff = malloc(sizeof(char) * (_strlen(dire) + _strlen(HIST_FILE) + 2));
 	if (!buff)
 		return (NULL);
 	buff[0] = 0;
@@ -81,7 +81,7 @@ int readHistory(info_t *info)
 	if (!buff)
 		return (0);
 	rdlen = read(fd, buff, fsiz);
-	buf[fsiz] = 0;
+	buff[fsiz] = 0;
 	if (rdlen <= 0)
 		return (free(buff), 0);
 	close(fd);

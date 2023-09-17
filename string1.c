@@ -76,7 +76,7 @@ int _putchar(char c)
 	static int k;
 	static char buff[WRITE_BUF_SIZE];
 
-	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	if (c == BUF_FLUSH || k >= WRITE_BUF_SIZE)
 	{
 		write(1, buff, k);
 		k = 0;

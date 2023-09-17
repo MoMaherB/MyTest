@@ -109,9 +109,9 @@ int replaceVars(info_t *info)
 	int k = 0;
 	list_t *node;
 
-	for (i = 0; info->argv[i]; i++)
+	for (k = 0; info->argv[k]; k++)
 	{
-		if (info->argv[i][0] != '$' || !info->argv[k][1])
+		if (info->argv[k][0] != '$' || !info->argv[k][1])
 			continue;
 
 		if (!_strcmp(info->argv[k], "$?"))

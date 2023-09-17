@@ -74,7 +74,7 @@ int printD(int input, int fd)
 	{
 		if (_abs_ / k)
 		{
-			__putchar('0' + current / i);
+			__putchar('0' + current / k);
 			count++;
 		}
 		current %= k;
